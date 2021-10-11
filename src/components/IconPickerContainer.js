@@ -1,14 +1,17 @@
+import IconButton from './IconButton'
+
 import './IconPickerContainer.css'
 
 const IconPickerContainer = (props) => {
+  const iPCHandler = (icon) => {
+    props.getIcon(icon)
+  }
+
   return (
     <div className='icon-picker-container'>
-      <p>IconPickerContainer</p>
-      <span className='material-icons'>home</span>
-      <span class='material-icons-outlined'>home</span>
-      <span class='material-icons-sharp'>account_circle</span>
-      <span className='material-icons'>account_circle</span>
-      <span className='material-icons'>&#xE87C;</span>
+      <IconButton pickIcon={iPCHandler} icon='home' />
+      <IconButton pickIcon={iPCHandler} icon='account_circle' />
+      <IconButton pickIcon={iPCHandler} icon='block' />
     </div>
   )
 }
