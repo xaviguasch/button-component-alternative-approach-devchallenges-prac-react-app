@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+
+import FinalButton from './components/FinalButton'
+import ClrPickerContainer from './components/ClrPickerContainer'
+import './App.css'
 
 function App() {
+  const [color, setColor] = useState('')
+
+  const changeColor = (color) => {
+    setColor(color)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <h1>Custom button</h1>
+      <FinalButton colorSetter={color} />
+      <ClrPickerContainer getColor={changeColor} />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
