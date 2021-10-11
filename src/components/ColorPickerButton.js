@@ -8,6 +8,8 @@ const ColorPickerButton = (props) => {
       props.pickColor('secondary')
     } else if (props.buttonColor === 'primary') {
       props.pickColor('primary')
+    } else if (props.buttonColor === 'default') {
+      props.pickColor('default')
     }
   }
 

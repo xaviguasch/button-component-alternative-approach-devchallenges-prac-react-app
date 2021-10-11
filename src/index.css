@@ -12,8 +12,14 @@ code {
 
 .btn {
   cursor: pointer;
+  border: none;
+  padding: 1em 2em;
 }
 
+.btn.default {
+  background-color: grey;
+  color: black;
+}
 .btn.danger {
   background-color: red;
 }

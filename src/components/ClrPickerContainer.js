@@ -7,8 +7,8 @@ const ClrPickerContainer = (props) => {
   }
 
   return (
-    <div>
-      <p>This is the color picker container</p>
+    <div className='clr-picker-container'>
+      <ColorPickerButton pickColor={clrPickerHandler} buttonColor={'default'} />
       <ColorPickerButton pickColor={clrPickerHandler} buttonColor={'primary'} />
       <ColorPickerButton pickColor={clrPickerHandler} buttonColor={'secondary'} />
       <ColorPickerButton pickColor={clrPickerHandler} buttonColor={'danger'} />
