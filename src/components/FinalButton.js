@@ -1,6 +1,7 @@
 import './FinalButton.css'
 
 const FinalButton = (props) => {
+  // need to wire the style and size props
   return (
     <div>
       <button

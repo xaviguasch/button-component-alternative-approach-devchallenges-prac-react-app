@@ -4,6 +4,8 @@ import FinalButton from './components/FinalButton'
 import ClrPickerContainer from './components/ClrPickerContainer'
 import IconPickerContainer from './components/IconPickerContainer'
 import Form from './components/Form'
+import Dropdown from './components/Dropdown'
+
 import './App.css'
 
 function App() {
@@ -11,6 +13,8 @@ function App() {
   const [icon, setIcon] = useState([])
   const [boxShadow, setBoxShadow] = useState(false)
   const [disabled, setDisabled] = useState(false)
+  const [styleOption, setStyle] = useState('')
+  const [sizeOption, setSize] = useState('')
 
   const changeColor = (color) => {
     setColor(color)
@@ -27,6 +31,14 @@ function App() {
     setDisabled((prevCheck) => !prevCheck)
   }
 
+  const changeOption = (option) => {
+    if (option[0] === 'style') {
+      setStyle(option[1])
+    } else if (option[0] === 'size') {
+      setSize(option[1])
+    }
+  }
+
   return (
     <div className='App'>
       <h1>Custom button</h1>
@@ -37,6 +49,19 @@ function App() {
         boxShadowSetter={boxShadow}
         boxShadow={boxShadow}
         disabled={disabled}
+        style={styleOption}
+        size={sizeOption}
+      />
+
+      <Dropdown
+        getOptionPicked={changeOption}
+        options={['Default', 'Outline', 'Text']}
+        type='style'
+      />
+      <Dropdown
+        getOptionPicked={changeOption}
+        options={['Small', 'Medium', 'Large']}
+        type='size'
       />
 
       <Form getCheckboxInfo={changeBoxShadow} camp={'Box Shadow'} />
