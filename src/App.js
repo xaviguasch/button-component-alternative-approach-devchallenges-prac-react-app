@@ -13,8 +13,8 @@ function App() {
   const [icon, setIcon] = useState([])
   const [boxShadow, setBoxShadow] = useState(false)
   const [disabled, setDisabled] = useState(false)
-  const [styleOption, setStyle] = useState('')
-  const [sizeOption, setSize] = useState('')
+  const [styleOption, setStyle] = useState('Default')
+  const [sizeOption, setSize] = useState('Small')
 
   const changeColor = (color) => {
     setColor(color)
@@ -33,8 +33,10 @@ function App() {
 
   const changeOption = (option) => {
     if (option[0] === 'style') {
+      console.log(option)
       setStyle(option[1])
     } else if (option[0] === 'size') {
+      console.log(option)
       setSize(option[1])
     }
   }
@@ -56,11 +58,13 @@ function App() {
       <Dropdown
         getOptionPicked={changeOption}
         options={['Default', 'Outline', 'Text']}
+        style={styleOption}
         type='style'
       />
       <Dropdown
         getOptionPicked={changeOption}
         options={['Small', 'Medium', 'Large']}
+        size={sizeOption}
         type='size'
       />
 

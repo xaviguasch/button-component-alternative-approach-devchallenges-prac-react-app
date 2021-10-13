@@ -6,12 +6,12 @@
   border-radius: 0.5em;
 }
 
-.shadow {
-  box-shadow: 4px 7px 4px 2px hsla(0, 13%, 81%, 0.72);
-}
-
 .btn--final:disabled {
   pointer-events: none;
   color: grey;
   background: white;
+}
+
+.shadow {
+  box-shadow: 4px 7px 4px 2px hsla(0, 13%, 81%, 0.72);
 }

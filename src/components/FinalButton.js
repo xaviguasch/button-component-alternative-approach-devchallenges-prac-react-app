@@ -7,7 +7,7 @@ const FinalButton = (props) => {
       <button
         className={`btn btn--final ${props.colorSetter} ${
           props.boxShadow ? 'shadow' : ''
-        }`}
+        } ${props.style} ${props.size}`}
         disabled={props.disabled}
       >
         <span className='material-icons'>{props.icon !== 'block' ? props.icon : ''}</span>

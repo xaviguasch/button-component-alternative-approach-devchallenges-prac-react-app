@@ -8,7 +8,12 @@ const Dropdown = (props) => {
   return (
     <div>
       <label htmlFor={props.type}>{props.type}</label>
-      <select name={props.type} id={props.type} onChange={submitHandler}>
+      <select
+        value={props.style || props.size} // 2-way binding
+        name={props.type}
+        id={props.type}
+        onChange={submitHandler}
+      >
         {props.options.map((option) => (
           <option key={Math.random()} value={option}>
             {option}
