@@ -43,36 +43,45 @@ function App() {
 
   return (
     <div className='App'>
-      <h1 className='title'>Custom button</h1>
+      <div className='wrapper'>
+        <h1 className='title'>Custom button</h1>
 
-      <FinalButton
-        colorSetter={color}
-        icon={icon}
-        boxShadowSetter={boxShadow}
-        boxShadow={boxShadow}
-        disabled={disabled}
-        style={styleOption}
-        size={sizeOption}
-      />
+        <FinalButton
+          colorSetter={color}
+          icon={icon}
+          boxShadowSetter={boxShadow}
+          boxShadow={boxShadow}
+          disabled={disabled}
+          style={styleOption}
+          size={sizeOption}
+        />
 
-      <Dropdown
-        getOptionPicked={changeOption}
-        options={['default', 'outline', 'text']}
-        style={styleOption}
-        type='style'
-      />
-      <Dropdown
-        getOptionPicked={changeOption}
-        options={['small', 'medium', 'large']}
-        size={sizeOption}
-        type='size'
-      />
+        <div className='group'>
+          <Dropdown
+            getOptionPicked={changeOption}
+            options={['default', 'outline', 'text']}
+            style={styleOption}
+            type='style'
+          />
+          <Dropdown
+            getOptionPicked={changeOption}
+            options={['small', 'medium', 'large']}
+            size={sizeOption}
+            type='size'
+          />
+        </div>
 
-      <Form getCheckboxInfo={changeBoxShadow} camp={'Box Shadow'} />
-      <Form getCheckboxInfo={changeDisabled} camp={'Disabled'} />
+        <div className='group'>
+          <Form getCheckboxInfo={changeBoxShadow} camp={'Box Shadow'} />
+          <Form getCheckboxInfo={changeDisabled} camp={'Disabled'} />
+        </div>
 
-      <IconPickerContainer getIcon={addIcons} />
-      {styleOption === 'default' && <ClrPickerContainer getColor={changeColor} />}
+        <IconPickerContainer getIcon={addIcons} />
+
+        {styleOption === 'default' && !disabled && (
+          <ClrPickerContainer getColor={changeColor} />
+        )}
+      </div>
     </div>
   )
 }

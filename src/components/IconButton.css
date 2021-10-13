@@ -1,4 +1,15 @@
+.btn--icon {
+  background-color: var(--clr-soft-grey);
+  padding: 0.5em 0.5em 0.3em;
+  border-radius: 0.5em;
+  border: 1px solid var(--clr-dark-grey);
+}
+
+.btn--icon.red .material-icons {
+  color: red;
+}
+
 .btn--icon:hover,
 .btn--icon:focus {
-  background-color: hsla(0, 0%, 0%, 0.3);
+  background-color: var(--clr-soft-grey-hover);
 }

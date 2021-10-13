@@ -6,7 +6,7 @@ const Dropdown = (props) => {
   }
 
   return (
-    <div>
+    <div className='dropdown'>
       <label className='item-label' htmlFor={props.type}>
         {props.type}
       </label>
@@ -15,7 +15,7 @@ const Dropdown = (props) => {
         name={props.type}
         id={props.type}
         onChange={submitHandler}
-        className='capitalize'
+        className={'capitalize select'}
       >
         {props.options.map((option) => (
           <option key={Math.random()} value={option}>

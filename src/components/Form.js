@@ -13,11 +13,11 @@ const Form = (props) => {
   return (
     <form>
       <div>
-        <label className='item-label' htmlFor=''>
+        <label className='item-label' htmlFor={props.camp}>
           <input
             type='checkbox'
             name=''
-            id=''
+            id={props.camp}
             onChange={submitHandler}
             checked={checkBoxValue}
           />

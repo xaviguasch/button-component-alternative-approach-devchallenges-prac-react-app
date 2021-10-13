@@ -15,7 +15,7 @@ const ColorPickerButton = (props) => {
 
   return (
     <button
-      className={`btn btn--color-picker ${props.buttonColor} capitalize`}
+      className={`btn btn--cp ${props.buttonColor} capitalize`}
       onClick={clickHandler}
     >
       {props.buttonColor}

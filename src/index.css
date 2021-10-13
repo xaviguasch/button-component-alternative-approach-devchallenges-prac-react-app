@@ -58,11 +58,13 @@
 
   /* Backgrounds */
   --clr-soft-grey: hsla(0, 0%, 88%, 1);
+  --clr-soft-grey-hover: hsla(0, 0%, 80%, 1);
   --clr-dark-grey: hsl(0, 0%, 68%);
   --clr-dark-grey-hover: hsl(0, 0%, 60%);
   --clr-soft-blue: hsla(224, 100%, 58%, 0.1);
   --clr-blue: hsl(231, 99%, 62%);
   --clr-blue-hover: hsl(231, 99%, 54%);
+  --clr-outline-hover: hsl(230, 71%, 93%);
   --clr-blue-2-semi-trans: hsla(224, 100%, 58%, 0.1);
   --clr-blue-3: hsla(223, 100%, 40%, 1);
   --clr-red: hsla(0, 65%, 51%, 1);
@@ -76,7 +78,7 @@
 }
 
 body {
-  background-color: var(--clr-white);
+  background-color: var(--clr-soft-grey);
   color: var(--clr-gray-2-text);
   font-family: var(--ff-main);
   font-size: var(--fs-16);

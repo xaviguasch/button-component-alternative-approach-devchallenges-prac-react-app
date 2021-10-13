@@ -1,0 +1,10 @@
+.dropdown {
+  display: flex;
+  gap: 1em;
+}
+
+.select {
+  width: 100px;
+  padding: 0.5em 1.25em;
+  border-radius: 0.5em;
+}

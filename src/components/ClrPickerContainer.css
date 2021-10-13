@@ -1,3 +1,9 @@
 .clr-picker-container {
-  margin-top: 3em;
+  border-radius: 1.25em;
+  overflow: hidden;
+
+  background: yellow;
+
+  display: flex;
+  justify-content: flex-start;
 }

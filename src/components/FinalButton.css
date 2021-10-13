@@ -1,38 +1,64 @@
 .btn--final {
   padding: 1.25em 3em;
   border-radius: 0.5em;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
 }
 
 .btn--final.small {
-  padding: 0.75em 2em;
+  width: 150px;
+  height: 50px;
 }
+
 .btn--final.medium {
-  padding: 1.125em 3em;
+  width: 172.5px;
+  height: 57.5px;
 }
 .btn--final.large {
-  padding: 1.5em 4em;
+  width: 195px;
+  height: 65px;
 }
 
 .btn--final.default {
   border: 1px solid transparent;
 }
 .btn--final.outline {
-  border: 1px solid blue;
-  background-color: white;
-  color: blue;
+  border: 1px solid var(--clr-blue);
+  background-color: var(--clr-white);
+  color: var(--clr-blue);
 }
+.btn--final.outline:hover,
+.btn--final.outline:focus {
+  border: 1px solid var(--clr-blue);
+  background-color: var(--clr-outline-hover);
+  color: var(--clr-blue);
+}
+
 .btn--final.text {
   border: 1px solid transparent;
-  background-color: white;
-  color: blue;
+  background-color: var(--clr-white);
+  color: var(--clr-blue);
+}
+
+.btn--final.text:hover,
+.btn--final.text:focus {
+  border: 1px solid transparent;
+  background-color: var(--clr-outline-hover);
+  color: var(--clr-blue);
 }
 
 .btn--final:disabled {
   cursor: not-allowed;
-  color: grey;
-  background: hsla(0, 4%, 84%, 0.678);
+  color: var(--clr-gray-3-text);
+  background: var(--clr-soft-grey);
+  border: 1px solid transparent;
 }
 
 .btn--final.shadow {
-  box-shadow: 4px 7px 4px 2px hsla(0, 13%, 81%, 0.72);
+  box-shadow: 9.4px 6.1px 10.7px rgba(0, 0, 0, 0.18),
+    17px 11px 24.5px rgba(0, 0, 0, 0.135), 24.5px 15.9px 41.6px rgba(0, 0, 0, 0.104),
+    34.8px 22.6px 59.1px rgba(0, 0, 0, 0.082), 60px 39px 75px rgba(0, 0, 0, 0.059);
 }

@@ -6,7 +6,7 @@ const IconButton = (props) => {
   }
 
   return (
-    <button className='btn btn--icon' onClick={clickHandlerIcon}>
+    <button className={`btn btn--icon ${props.color}`} onClick={clickHandlerIcon}>
       <span className='material-icons'>{props.icon}</span>
     </button>
   )
