@@ -7,7 +7,9 @@ const Dropdown = (props) => {
 
   return (
     <div>
-      <label htmlFor={props.type}>{props.type}</label>
+      <label className='item-label' htmlFor={props.type}>
+        {props.type}
+      </label>
       <select
         value={props.style || props.size} // 2-way binding
         name={props.type}

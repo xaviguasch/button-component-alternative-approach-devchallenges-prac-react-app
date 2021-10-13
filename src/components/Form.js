@@ -13,7 +13,7 @@ const Form = (props) => {
   return (
     <form>
       <div>
-        <label htmlFor=''>
+        <label className='item-label' htmlFor=''>
           <input
             type='checkbox'
             name=''

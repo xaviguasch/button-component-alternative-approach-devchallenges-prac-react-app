@@ -43,7 +43,7 @@ function App() {
 
   return (
     <div className='App'>
-      <h1>Custom button</h1>
+      <h1 className='title'>Custom button</h1>
 
       <FinalButton
         colorSetter={color}

@@ -9,6 +9,7 @@ const IconPickerContainer = (props) => {
 
   return (
     <div className='icon-picker-container'>
+      <p className='item-label'>Icon</p>
       <IconButton pickIcon={iPCHandler} icon='home' />
       <IconButton pickIcon={iPCHandler} icon='account_circle' />
       <IconButton pickIcon={iPCHandler} icon='block' />
