@@ -1,17 +1,38 @@
 .btn--final {
-  background-color: grey;
-  color: white;
-  padding: 1.5em 4em;
-
+  padding: 1.25em 3em;
   border-radius: 0.5em;
 }
 
-.btn--final:disabled {
-  pointer-events: none;
-  color: grey;
-  background: white;
+.btn--final.small {
+  padding: 0.75em 2em;
+}
+.btn--final.medium {
+  padding: 1.125em 3em;
+}
+.btn--final.large {
+  padding: 1.5em 4em;
 }
 
-.shadow {
+.btn--final.default {
+  border: 1px solid transparent;
+}
+.btn--final.outline {
+  border: 1px solid blue;
+  background-color: white;
+  color: blue;
+}
+.btn--final.text {
+  border: 1px solid transparent;
+  background-color: white;
+  color: blue;
+}
+
+.btn--final:disabled {
+  cursor: not-allowed;
+  color: grey;
+  background: hsla(0, 4%, 84%, 0.678);
+}
+
+.btn--final.shadow {
   box-shadow: 4px 7px 4px 2px hsla(0, 13%, 81%, 0.72);
 }

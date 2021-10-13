@@ -22,11 +22,18 @@ code {
 }
 .btn.danger {
   background-color: red;
+  color: white;
 }
 
 .btn.secondary {
   background-color: green;
+  color: white;
 }
 .btn.primary {
   background-color: blue;
+  color: white;
+}
+
+.capitalize {
+  text-transform: capitalize;
 }

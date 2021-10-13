@@ -11,7 +11,7 @@ const FinalButton = (props) => {
         disabled={props.disabled}
       >
         <span className='material-icons'>{props.icon !== 'block' ? props.icon : ''}</span>
-        I'm the final button
+        Default
       </button>
     </div>
   )

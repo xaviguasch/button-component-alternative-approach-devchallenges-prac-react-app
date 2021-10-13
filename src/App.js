@@ -13,8 +13,8 @@ function App() {
   const [icon, setIcon] = useState([])
   const [boxShadow, setBoxShadow] = useState(false)
   const [disabled, setDisabled] = useState(false)
-  const [styleOption, setStyle] = useState('Default')
-  const [sizeOption, setSize] = useState('Small')
+  const [styleOption, setStyle] = useState('default')
+  const [sizeOption, setSize] = useState('small')
 
   const changeColor = (color) => {
     setColor(color)
@@ -57,13 +57,13 @@ function App() {
 
       <Dropdown
         getOptionPicked={changeOption}
-        options={['Default', 'Outline', 'Text']}
+        options={['default', 'outline', 'text']}
         style={styleOption}
         type='style'
       />
       <Dropdown
         getOptionPicked={changeOption}
-        options={['Small', 'Medium', 'Large']}
+        options={['small', 'medium', 'large']}
         size={sizeOption}
         type='size'
       />
@@ -72,7 +72,7 @@ function App() {
       <Form getCheckboxInfo={changeDisabled} camp={'Disabled'} />
 
       <IconPickerContainer getIcon={addIcons} />
-      <ClrPickerContainer getColor={changeColor} />
+      {styleOption === 'default' && <ClrPickerContainer getColor={changeColor} />}
     </div>
   )
 }
