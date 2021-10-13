@@ -57,6 +57,7 @@
   --clr-blue-text: hsla(231, 99%, 62%, 1);
 
   /* Backgrounds */
+  --clr-disabled: hsl(0, 0%, 23%);
   --clr-soft-grey: hsla(0, 0%, 88%, 1);
   --clr-soft-grey-hover: hsla(0, 0%, 80%, 1);
   --clr-dark-grey: hsl(0, 0%, 68%);
@@ -125,12 +126,12 @@ ul {
 }
 
 .btn.default {
-  background-color: var(--clr-dark-grey);
+  background-color: var(--clr-soft-grey);
   color: var(--clr-dark-text);
 }
 .btn.default:hover,
 .btn.default:focus {
-  background-color: var(--clr-dark-grey-hover);
+  background-color: var(--clr-soft-grey-hover);
 }
 
 .btn.primary {

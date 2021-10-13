@@ -9,15 +9,18 @@
 }
 
 .btn--final.small {
+  font-size: var(--fs-16);
   width: 150px;
   height: 50px;
 }
 
 .btn--final.medium {
+  font-size: var(--fs-18);
   width: 172.5px;
   height: 57.5px;
 }
 .btn--final.large {
+  font-size: var(--fs-20);
   width: 195px;
   height: 65px;
 }
@@ -50,10 +53,12 @@
   color: var(--clr-blue);
 }
 
-.btn--final:disabled {
+.btn--final:disabled,
+.btn--final:disabled:hover,
+.btn--final:disabled:focus {
   cursor: not-allowed;
   color: var(--clr-gray-3-text);
-  background: var(--clr-soft-grey);
+  background: var(--clr-disabled);
   border: 1px solid transparent;
 }
 
