@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import FinalButton from './components/FinalButton'
 import ClrPickerContainer from './components/ClrPickerContainer'
-import IconPickerContainer from './components/IconPickerContainer'
+import IconPicker from './components/IconPicker'
 import Form from './components/Form'
 import Dropdown from './components/Dropdown'
 
@@ -76,7 +76,7 @@ function App() {
           <Form getCheckboxInfo={changeDisabled} camp={'Disabled'} />
         </div>
 
-        <IconPickerContainer getIcon={addIcons} />
+        <IconPicker getIcon={addIcons} />
 
         {styleOption === 'default' && !disabled && (
           <ClrPickerContainer getColor={changeColor} />

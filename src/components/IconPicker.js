@@ -1,14 +1,14 @@
 import IconButton from './IconButton'
 
-import './IconPickerContainer.css'
+import './IconPicker.css'
 
-const IconPickerContainer = (props) => {
+const IconPicker = (props) => {
   const iPCHandler = (icon) => {
     props.getIcon(icon)
   }
 
   return (
-    <div className='icon-picker-container'>
+    <div className='icon-picker'>
       <p className='item-label'>Icon</p>
       <IconButton pickIcon={iPCHandler} icon='home' />
       <IconButton pickIcon={iPCHandler} icon='account_circle' />
@@ -19,4 +19,4 @@ const IconPickerContainer = (props) => {
   )
 }
 
-export default IconPickerContainer
+export default IconPicker
